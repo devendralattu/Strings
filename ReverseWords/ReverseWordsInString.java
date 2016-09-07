@@ -52,6 +52,10 @@ public class ReverseWordsInString {
 		str = str.trim();
 		char cStr[] = str.toCharArray();
 		
+		if(cStr.length == 0){
+			System.out.println("Invalid String entered");
+			return;
+		}
 		String output = r.reverseAllWords(cStr);
 		System.out.println("Reversed words in string = " + output);
 		//blue is sky The
