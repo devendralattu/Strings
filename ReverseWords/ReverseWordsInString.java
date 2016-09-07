@@ -21,15 +21,18 @@ public class ReverseWordsInString {
 		int i = 0, pointer = 0;
 		int len = cStr.length;
 		int spaceArr[] = new int[len];
+		
+		//reverse the entire string: "eulb si yks ehT"
 		cStr = reverseString(cStr, 0, len - 1);
 		System.out.println("initial reversed string = " + new String(cStr));
 		
+		//get location of spaces in string 
 		for (i = 0; i < len; i++) {
 			if(cStr[i] == ' '){
 				spaceArr[pointer++] = i;
 			}
 		}
-		//for last word
+		//pointer for the last word
 		spaceArr[pointer++] = i;
 		
 		//Perform reverse operations
